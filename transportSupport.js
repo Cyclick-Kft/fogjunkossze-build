@@ -4,13 +4,11 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-import { useState } from "react";
-
 export var useForm = function useForm(initalValues) {
-  var _useState = useState(initalValues),
-      _useState2 = _slicedToArray(_useState, 2),
-      values = _useState2[0],
-      setValues = _useState2[1];
+  var _React$useState = React.useState(initalValues),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      values = _React$useState2[0],
+      setValues = _React$useState2[1];
 
   return [values, function (e) {
     setValues(Object.assign({}, values, _defineProperty({}, e.target.name, e.target.value)));
@@ -235,10 +233,10 @@ var CompanyForm = function CompanyForm(props) {
 };
 
 var TransportSupport = function TransportSupport() {
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isCompany = _useState4[0],
-      setIsCompany = _useState4[1];
+  var _useState = useState(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isCompany = _useState2[0],
+      setIsCompany = _useState2[1];
 
   return React.createElement(
     'div',

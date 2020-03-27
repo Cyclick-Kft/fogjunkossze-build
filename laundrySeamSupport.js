@@ -34,7 +34,9 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     offerer: "",
     email: "",
     phoneNum: "",
-    amount: 0,
+    startingPoint: "",
+    destination: "",
+    type: "forwarding",
     supportMethod: "hospital"
   }),
       _useForm2 = _slicedToArray(_useForm, 2),
@@ -64,16 +66,35 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement('input', { type: 'text', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'amount' },
-      '\xD6sszeg:'
+      { htmlFor: 'startingPoint' },
+      'Honnan:'
     ),
-    React.createElement('input', { type: 'number', name: 'amount', id: 'amount', value: naturalPersonFormVals.amount, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'text', name: 'startingPoint', id: 'startingPoint', value: naturalPersonFormVals.startingPoint, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'amount' },
-      'T\xE1mogat\xE1s m\xF3dja:'
+      { htmlFor: 'destination' },
+      'Hov\xE1:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'text', name: 'destination', id: 'destination', value: naturalPersonFormVals.destination, onChange: naturalPersonHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'type' },
+      'T\xEDpus:'
+    ),
+    React.createElement(
+      'select',
+      { name: 'type', id: 'type', value: naturalPersonFormVals.type, onChange: naturalPersonHandleChange },
+      React.createElement(
+        'option',
+        { value: 'forwarding' },
+        'T\xE1rgyi'
+      ),
+      React.createElement(
+        'option',
+        { value: 'personal' },
+        'Szem\xE9lyi'
+      )
+    ),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -107,7 +128,9 @@ var CompanyForm = function CompanyForm(props) {
     address: "",
     email: "",
     phoneNum: "",
-    amount: 0,
+    startingPoint: "",
+    destination: "",
+    type: "forwarding",
     supportMethod: "hospital"
   }),
       _useForm4 = _slicedToArray(_useForm3, 2),
@@ -155,16 +178,35 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement('input', { type: 'text', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'amount' },
-      '\xD6sszeg:'
+      { htmlFor: 'startingPoint' },
+      'Honnan:'
     ),
-    React.createElement('input', { type: 'number', name: 'amount', id: 'amount', value: companyFormVals.amount, onChange: companyHandleChange }),
+    React.createElement('input', { type: 'text', name: 'startingPoint', id: 'startingPoint', value: naturalPersonFormVals.startingPoint, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'amount' },
-      'T\xE1mogat\xE1s m\xF3dja:'
+      { htmlFor: 'destination' },
+      'Hov\xE1:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange }),
+    React.createElement('input', { type: 'text', name: 'destination', id: 'destination', value: naturalPersonFormVals.destination, onChange: naturalPersonHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'type' },
+      'T\xEDpus:'
+    ),
+    React.createElement(
+      'select',
+      { name: 'type', id: 'type', value: naturalPersonFormVals.type, onChange: naturalPersonHandleChange },
+      React.createElement(
+        'option',
+        { value: 'forwarding' },
+        'T\xE1rgyi'
+      ),
+      React.createElement(
+        'option',
+        { value: 'personal' },
+        'Szem\xE9lyi'
+      )
+    ),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -172,7 +214,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange },
+      { name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
         { value: 'hospital' },
@@ -190,7 +232,7 @@ var CompanyForm = function CompanyForm(props) {
   );
 };
 
-var FinancialSupport = function FinancialSupport() {
+var LaundrySeamSupport = function LaundrySeamSupport() {
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       isCompany = _useState2[0],
@@ -218,5 +260,5 @@ var FinancialSupport = function FinancialSupport() {
     isCompany ? NaturalPersonForm : CompanyForm
   );
 };
-var domContainer = document.querySelector('#financialOffer');
-ReactDOM.render(React.createElement(FinancialSupport, null), domContainer);
+var domContainer = document.querySelector('#laundrySeamOffer');
+ReactDOM.render(React.createElement(LaundrySeamSupport, null), domContainer);
