@@ -80,7 +80,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { htmlFor: 'count' },
       'Darabsz\xE1m:'
     ),
-    React.createElement('input', { className: 'form-control', type: 'count', name: 'count', id: 'count', value: naturalPersonFormVals.count, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'number', name: 'count', id: 'count', value: naturalPersonFormVals.count, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'protGearType' },
@@ -132,7 +132,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement(
       'button',
       { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault;OfferingSender("", naturalPersonFormVals);
+          e.preventDefault();OfferingSender("", naturalPersonFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
@@ -211,7 +211,7 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'count' },
       'Darabsz\xE1m:'
     ),
-    React.createElement('input', { className: 'form-control', type: 'count', name: 'count', id: 'count', value: companyFormVals.count, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'number', name: 'count', id: 'count', value: companyFormVals.count, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'protGearType' },
@@ -263,7 +263,7 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement(
       'button',
       { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault;OfferingSender(companyFormVals);
+          e.preventDefault();OfferingSender(companyFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )

@@ -34,9 +34,10 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     offerer: "",
     email: "",
     phoneNum: "",
-    startingPoint: "",
-    destination: "",
-    type: "forwarding",
+    serviceType: "other",
+    serviceName: "",
+    quality: "volunteer",
+    helpInTransport: false,
     supportMethod: "hospital"
   }),
       _useForm2 = _slicedToArray(_useForm, 2),
@@ -71,35 +72,59 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'startingPoint' },
-      'Honnan:'
-    ),
-    React.createElement('input', { className: 'form-control', type: 'text', name: 'startingPoint', id: 'startingPoint', value: naturalPersonFormVals.startingPoint, onChange: naturalPersonHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'destination' },
-      'Hov\xE1:'
-    ),
-    React.createElement('input', { className: 'form-control', type: 'text', name: 'destination', id: 'destination', value: naturalPersonFormVals.destination, onChange: naturalPersonHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'type' },
-      'T\xEDpus:'
+      { htmlFor: 'condition' },
+      'Szolg\xE1ltat\xE1s t\xEDpusa:'
     ),
     React.createElement(
       'select',
-      { className: 'form-control', name: 'type', id: 'type', value: naturalPersonFormVals.type, onChange: naturalPersonHandleChange },
+      { className: 'form-control', name: 'condition', id: 'condition', value: naturalPersonFormVals.condition, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
-        { value: 'forwarding' },
-        'T\xE1rgyi'
+        { value: 'laundry' },
+        'Mos\xE1s'
       ),
       React.createElement(
         'option',
-        { value: 'personal' },
-        'Szem\xE9lyi'
+        { value: 'seam' },
+        'Varr\xE1s'
+      ),
+      React.createElement(
+        'option',
+        { value: 'other' },
+        'Egy\xE9b'
       )
     ),
+    React.createElement(
+      'label',
+      { htmlFor: 'serviceName' },
+      'Szolg\xE1ltat\xE1s neve:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'serviceName', id: 'serviceName', value: naturalPersonFormVals.serviceName, onChange: naturalPersonHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'quality' },
+      'Szolg\xE1ltat\xE1s min\u0151s\xE9ge:'
+    ),
+    React.createElement(
+      'select',
+      { className: 'form-control', name: 'quality', id: 'quality', value: naturalPersonFormVals.quality, onChange: naturalPersonHandleChange },
+      React.createElement(
+        'option',
+        { value: 'professional' },
+        'Hivat\xE1sos'
+      ),
+      React.createElement(
+        'option',
+        { value: 'volunteer' },
+        '\xD6nk\xE9ntes'
+      )
+    ),
+    React.createElement(
+      'label',
+      { htmlFor: 'helpInTransport' },
+      'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: !naturalPersonFormVals.helpInTransport, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -137,9 +162,10 @@ var CompanyForm = function CompanyForm(props) {
     address: "",
     email: "",
     phoneNum: "",
-    startingPoint: "",
-    destination: "",
-    type: "forwarding",
+    serviceType: "other",
+    serviceName: "",
+    quality: "volunteer",
+    helpInTransport: false,
     supportMethod: "hospital"
   }),
       _useForm4 = _slicedToArray(_useForm3, 2),
@@ -192,35 +218,59 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'startingPoint' },
-      'Honnan:'
-    ),
-    React.createElement('input', { className: 'form-control', type: 'text', name: 'startingPoint', id: 'startingPoint', value: companyFormVals.startingPoint, onChange: companyHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'destination' },
-      'Hov\xE1:'
-    ),
-    React.createElement('input', { className: 'form-control', type: 'text', name: 'destination', id: 'destination', value: companyFormVals.destination, onChange: companyHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'type' },
-      'T\xEDpus:'
+      { htmlFor: 'condition' },
+      'Szolg\xE1ltat\xE1s t\xEDpusa:'
     ),
     React.createElement(
       'select',
-      { className: 'form-control', name: 'type', id: 'type', value: companyFormVals.type, onChange: companyHandleChange },
+      { className: 'form-control', name: 'condition', id: 'condition', value: companyFormVals.condition, onChange: companyHandleChange },
       React.createElement(
         'option',
-        { value: 'forwarding' },
-        'T\xE1rgyi'
+        { value: 'laundry' },
+        'Mos\xE1s'
       ),
       React.createElement(
         'option',
-        { value: 'personal' },
-        'Szem\xE9lyi'
+        { value: 'seam' },
+        'Varr\xE1s'
+      ),
+      React.createElement(
+        'option',
+        { value: 'other' },
+        'Egy\xE9b'
       )
     ),
+    React.createElement(
+      'label',
+      { htmlFor: 'serviceName' },
+      'Szolg\xE1ltat\xE1s neve:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'serviceName', id: 'serviceName', value: companyFormVals.serviceName, onChange: companyHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'quality' },
+      'Szolg\xE1ltat\xE1s min\u0151s\xE9ge:'
+    ),
+    React.createElement(
+      'select',
+      { className: 'form-control', name: 'quality', id: 'quality', value: companyFormVals.quality, onChange: companyHandleChange },
+      React.createElement(
+        'option',
+        { value: 'professional' },
+        'Hivat\xE1sos'
+      ),
+      React.createElement(
+        'option',
+        { value: 'volunteer' },
+        '\xD6nk\xE9ntes'
+      )
+    ),
+    React.createElement(
+      'label',
+      { htmlFor: 'helpInTransport' },
+      'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: !companyFormVals.helpInTransport, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -250,7 +300,7 @@ var CompanyForm = function CompanyForm(props) {
   );
 };
 
-var TransportSupport = function TransportSupport() {
+var MedicalGearSupport = function MedicalGearSupport() {
   var _React$useState3 = React.useState(false),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       isCompany = _React$useState4[0],
@@ -278,5 +328,5 @@ var TransportSupport = function TransportSupport() {
     isCompany ? React.createElement(CompanyForm, null) : React.createElement(NaturalPersonForm, null)
   );
 };
-var domContainer = document.querySelector('#transportOffer');
-ReactDOM.render(React.createElement(TransportSupport, null), domContainer);
+var domContainer = document.querySelector('#medicalGearOffer');
+ReactDOM.render(React.createElement(MedicalGearSupport, null), domContainer);

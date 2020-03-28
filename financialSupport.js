@@ -102,7 +102,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement(
       'button',
       { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault;OfferingSender("", naturalPersonFormVals);
+          e.preventDefault();OfferingSender("", naturalPersonFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
@@ -203,7 +203,7 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement(
       'button',
       { className: 'btn btn-outline-success', type: 'submit', onClick: function onClick(e) {
-          e.preventDefault;OfferingSender(companyFormVals);
+          e.preventDefault();OfferingSender(companyFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
