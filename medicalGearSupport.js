@@ -74,7 +74,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { htmlFor: 'helpInTransport' },
       'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
     ),
-    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: true, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: !naturalPersonFormVals.helpInTransport, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'count' },
@@ -205,7 +205,7 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'helpInTransport' },
       'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
     ),
-    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: true, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: !companyFormVals.helpInTransport, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'count' },
