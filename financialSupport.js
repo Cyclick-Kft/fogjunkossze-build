@@ -50,36 +50,36 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { htmlFor: 'offerer' },
       'N\xE9v:'
     ),
-    React.createElement('input', { type: 'text', name: 'offerer', id: 'offerer', value: naturalPersonFormVals.offerer, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'offerer', id: 'offerer', value: naturalPersonFormVals.offerer, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'email' },
       'Email: '
     ),
-    React.createElement('input', { type: 'email', name: 'email', id: 'email', value: naturalPersonFormVals.email, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'email', name: 'email', id: 'email', value: naturalPersonFormVals.email, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
     React.createElement(
-      'span',
-      null,
+      'small',
+      { className: 'text-muted' },
       'K\xF6t\u0151jelekkel tagolva pl: (+36-30-000-0000)'
     ),
-    React.createElement('input', { type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'amount' },
       '\xD6sszeg:'
     ),
-    React.createElement('input', { type: 'number', name: 'amount', id: 'amount', value: naturalPersonFormVals.amount, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'number', name: 'amount', id: 'amount', value: naturalPersonFormVals.amount, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportType' },
       'T\xE1mogat\xE1s m\xF3dja:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportType', id: 'supportType', value: naturalPersonFormVals.supportType, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'supportType', id: 'supportType', value: naturalPersonFormVals.supportType, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -87,7 +87,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange },
+      { className: 'form-control', name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
         { value: 'hospital' },
@@ -101,7 +101,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     ),
     React.createElement(
       'button',
-      { type: 'submit', onSubmit: function onSubmit(e) {
+      { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
           e.preventDefault;OfferingSender("", naturalPersonFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
@@ -133,54 +133,54 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'offerer' },
       'C\xE9g n\xE9v:'
     ),
-    React.createElement('input', { type: 'text', name: 'offerer', id: 'offerer', value: companyFormVals.offerer, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'offerer', id: 'offerer', value: companyFormVals.offerer, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'contactPerson' },
       'Kapcsolat tart\xF3 neve:'
     ),
-    React.createElement('input', { type: 'text', name: 'contactPerson', id: 'contactPerson', value: companyFormVals.contactPerson, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'contactPerson', id: 'contactPerson', value: companyFormVals.contactPerson, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'taxNumber' },
       'Ad\xF3sz\xE1m:'
     ),
-    React.createElement('input', { type: 'text', name: 'taxNumber', id: 'taxNumber', value: companyFormVals.taxNumber, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'taxNumber', id: 'taxNumber', value: companyFormVals.taxNumber, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'address' },
       'Sz\xE9khely:'
     ),
-    React.createElement('input', { type: 'text', name: 'address', id: 'address', value: companyFormVals.address, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'address', id: 'address', value: companyFormVals.address, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'email' },
       'Email: '
     ),
-    React.createElement('input', { type: 'email', name: 'email', id: 'email', value: companyFormVals.email, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'email', name: 'email', id: 'email', value: companyFormVals.email, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
     React.createElement(
-      'span',
-      null,
+      'small',
+      { className: 'text-muted' },
       'K\xF6t\u0151jelekkel tagolva pl: (+36-30-000-0000)'
     ),
-    React.createElement('input', { type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'amount' },
       '\xD6sszeg:'
     ),
-    React.createElement('input', { type: 'number', name: 'amount', id: 'amount', value: companyFormVals.amount, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'number', name: 'amount', id: 'amount', value: companyFormVals.amount, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportType' },
       'T\xE1mogat\xE1s m\xF3dja:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportType', id: 'supportType', value: companyFormVals.supportType, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'supportType', id: 'supportType', value: companyFormVals.supportType, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -188,7 +188,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange },
+      { className: 'form-control', name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange },
       React.createElement(
         'option',
         { value: 'hospital' },
@@ -202,7 +202,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'button',
-      { type: 'submit', onSubmit: function onSubmit(e) {
+      { className: 'btn btn-outline-success', type: 'submit', onClick: function onClick(e) {
           e.preventDefault;OfferingSender(companyFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'

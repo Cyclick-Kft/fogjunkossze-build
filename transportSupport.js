@@ -121,7 +121,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     ),
     React.createElement(
       'button',
-      { type: 'submit', onSubmit: function onSubmit(e) {
+      { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
           e.preventDefault;OfferingSender("", naturalPersonFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
