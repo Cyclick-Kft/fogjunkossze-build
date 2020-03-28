@@ -215,7 +215,7 @@ var FinancialSupport = function FinancialSupport() {
           return setIsCompany(false);
         } })
     ),
-    isCompany ? NaturalPersonForm : CompanyForm
+    isCompany ? React.createElement(NaturalPersonForm, null) : React.createElement(CompanyForm, null)
   );
 };
 var domContainer = document.querySelector('#financialOffer');
