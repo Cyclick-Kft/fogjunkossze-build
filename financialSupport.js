@@ -62,7 +62,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
-    React.createElement('input', { type: 'tel', pattern: '[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'tel', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'amount' },
@@ -158,7 +158,7 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
-    React.createElement('input', { type: 'tel', pattern: '[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
+    React.createElement('input', { type: 'tel', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'amount' },
@@ -213,7 +213,7 @@ var FinancialSupport = function FinancialSupport() {
       'label',
       null,
       'Mag\xE1nszem\xE9lyk\xE9nt teszek felaj\xE1nl\xE1st:',
-      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', checked: true, value: false, onChange: function onChange() {
+      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', value: false, onChange: function onChange() {
           return setIsCompany(false);
         } })
     ),
