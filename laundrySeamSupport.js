@@ -307,7 +307,7 @@ var CompanyForm = function CompanyForm(props) {
   );
 };
 
-var MedicalGearSupport = function MedicalGearSupport() {
+var LaundrySeamSupport = function LaundrySeamSupport() {
   var _React$useState3 = React.useState(false),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       isCompany = _React$useState4[0],
@@ -335,5 +335,5 @@ var MedicalGearSupport = function MedicalGearSupport() {
     isCompany ? React.createElement(CompanyForm, null) : React.createElement(NaturalPersonForm, null)
   );
 };
-var domContainer = document.querySelector('#medicalGearOffer');
-ReactDOM.render(React.createElement(MedicalGearSupport, null), domContainer);
+var domContainer = document.querySelector('#laundrySeamOffer');
+ReactDOM.render(React.createElement(LaundrySeamSupport, null), domContainer);
