@@ -43,7 +43,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       naturalPersonHandleChange = _useForm2[1];
 
   return React.createElement(
-    'form',
+    'div',
     null,
     React.createElement(
       'label',
@@ -94,9 +94,13 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
         'Mag\xE1nszem\xE9ly'
       )
     ),
-    React.createElement('button', { type: 'submit', onSubmit: function onSubmit(e) {
-        e.preventDefault;OfferingSender("", naturalPersonFormVals);
-      } })
+    React.createElement(
+      'button',
+      { type: 'submit', onSubmit: function onSubmit(e) {
+          e.preventDefault;OfferingSender("", naturalPersonFormVals);
+        } },
+      'Felaj\xE1nl\xE1s k\xFCld\xE9se'
+    )
   );
 };
 
@@ -117,7 +121,7 @@ var CompanyForm = function CompanyForm(props) {
       companyHandleChange = _useForm4[1];
 
   return React.createElement(
-    'form',
+    'div',
     null,
     React.createElement(
       'label',
@@ -186,9 +190,13 @@ var CompanyForm = function CompanyForm(props) {
         'Mag\xE1nszem\xE9ly'
       )
     ),
-    React.createElement('button', { type: 'submit', onSubmit: function onSubmit(e) {
-        e.preventDefault;financialOfferingSender(companyFormVals);
-      } })
+    React.createElement(
+      'button',
+      { type: 'submit', onSubmit: function onSubmit(e) {
+          e.preventDefault;financialOfferingSender(companyFormVals);
+        } },
+      'Felaj\xE1nl\xE1s k\xFCld\xE9se'
+    )
   );
 };
 
