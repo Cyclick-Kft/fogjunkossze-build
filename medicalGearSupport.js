@@ -34,9 +34,9 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     offerer: "",
     email: "",
     phoneNum: "",
-    startingPoint: "",
-    destination: "",
-    type: "forwarding",
+    protGearType: "gloves",
+    count: 0,
+    helpInTransport: false,
     supportMethod: "hospital"
   }),
       _useForm2 = _slicedToArray(_useForm, 2),
@@ -51,48 +51,63 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { htmlFor: 'offerer' },
       'N\xE9v:'
     ),
-    React.createElement('input', { type: 'text', name: 'offerer', id: 'offerer', value: naturalPersonFormVals.offerer, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'offerer', id: 'offerer', value: naturalPersonFormVals.offerer, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'email' },
       'Email: '
     ),
-    React.createElement('input', { type: 'email', name: 'email', id: 'email', value: naturalPersonFormVals.email, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'email', name: 'email', id: 'email', value: naturalPersonFormVals.email, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
-    React.createElement('input', { type: 'text', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
-      'label',
-      { htmlFor: 'startingPoint' },
-      'Honnan:'
+      'small',
+      { className: 'text-muted' },
+      'K\xF6t\u0151jelekkel tagolva pl: (+36-30-000-0000)'
     ),
-    React.createElement('input', { type: 'text', name: 'startingPoint', id: 'startingPoint', value: naturalPersonFormVals.startingPoint, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'destination' },
-      'Hov\xE1:'
+      { htmlFor: 'helpInTransport' },
+      'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
     ),
-    React.createElement('input', { type: 'text', name: 'destination', id: 'destination', value: naturalPersonFormVals.destination, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: true, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'type' },
-      'T\xEDpus:'
+      { htmlFor: 'count' },
+      'Darabsz\xE1m:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'count', name: 'count', id: 'count', value: naturalPersonFormVals.count, onChange: naturalPersonHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'protGearType' },
+      'V\xE9d\u0151felszerel\xE9s t\xEDpusa:'
     ),
     React.createElement(
       'select',
-      { name: 'type', id: 'type', value: naturalPersonFormVals.type, onChange: naturalPersonHandleChange },
+      { className: 'form-control', name: 'protGearType', id: 'protGearType', value: naturalPersonFormVals.protGearType, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
-        { value: 'forwarding' },
-        'T\xE1rgyi'
+        { value: 'gloves' },
+        'Keszty\u0171'
       ),
       React.createElement(
         'option',
-        { value: 'personal' },
-        'Szem\xE9lyi'
+        { value: 'garment' },
+        'Ruha'
+      ),
+      React.createElement(
+        'option',
+        { value: 'mask' },
+        'Maszk'
+      ),
+      React.createElement(
+        'option',
+        { value: 'other' },
+        'Egy\xE9b'
       )
     ),
     React.createElement(
@@ -102,7 +117,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange },
+      { className: 'form-control', name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
         { value: 'hospital' },
@@ -116,7 +131,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     ),
     React.createElement(
       'button',
-      { type: 'submit', onSubmit: function onSubmit(e) {
+      { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
           e.preventDefault;OfferingSender("", naturalPersonFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
@@ -132,9 +147,9 @@ var CompanyForm = function CompanyForm(props) {
     address: "",
     email: "",
     phoneNum: "",
-    startingPoint: "",
-    destination: "",
-    type: "forwarding",
+    protGearType: "gloves",
+    count: 0,
+    helpInTransport: false,
     supportMethod: "hospital"
   }),
       _useForm4 = _slicedToArray(_useForm3, 2),
@@ -149,66 +164,81 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'offerer' },
       'C\xE9g n\xE9v:'
     ),
-    React.createElement('input', { type: 'text', name: 'offerer', id: 'offerer', value: companyFormVals.offerer, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'offerer', id: 'offerer', value: companyFormVals.offerer, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'contactPerson' },
       'Kapcsolat tart\xF3 neve:'
     ),
-    React.createElement('input', { type: 'text', name: 'contactPerson', id: 'contactPerson', value: companyFormVals.contactPerson, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'contactPerson', id: 'contactPerson', value: companyFormVals.contactPerson, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'taxNumber' },
       'Ad\xF3sz\xE1m:'
     ),
-    React.createElement('input', { type: 'text', name: 'taxNumber', id: 'taxNumber', value: companyFormVals.taxNumber, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'taxNumber', id: 'taxNumber', value: companyFormVals.taxNumber, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'address' },
       'Sz\xE9khely:'
     ),
-    React.createElement('input', { type: 'text', name: 'address', id: 'address', value: companyFormVals.address, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'text', name: 'address', id: 'address', value: companyFormVals.address, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'email' },
       'Email: '
     ),
-    React.createElement('input', { type: 'email', name: 'email', id: 'email', value: companyFormVals.email, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'email', name: 'email', id: 'email', value: companyFormVals.email, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
-    React.createElement('input', { type: 'text', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
-      'label',
-      { htmlFor: 'startingPoint' },
-      'Honnan:'
+      'small',
+      { className: 'text-muted' },
+      'K\xF6t\u0151jelekkel tagolva pl: (+36-30-000-0000)'
     ),
-    React.createElement('input', { type: 'text', name: 'startingPoint', id: 'startingPoint', value: companyFormVals.startingPoint, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'destination' },
-      'Hov\xE1:'
+      { htmlFor: 'helpInTransport' },
+      'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
     ),
-    React.createElement('input', { type: 'text', name: 'destination', id: 'destination', value: companyFormVals.destination, onChange: companyHandleChange }),
+    React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: true, onChange: companyHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'type' },
-      'T\xEDpus:'
+      { htmlFor: 'count' },
+      'Darabsz\xE1m:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'count', name: 'count', id: 'count', value: companyFormVals.count, onChange: companyHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'protGearType' },
+      'V\xE9d\u0151felszerel\xE9s t\xEDpusa:'
     ),
     React.createElement(
       'select',
-      { name: 'type', id: 'type', value: companyFormVals.type, onChange: companyHandleChange },
+      { className: 'form-control', name: 'protGearType', id: 'protGearType', value: companyFormVals.protGearType, onChange: companyHandleChange },
       React.createElement(
         'option',
-        { value: 'forwarding' },
-        'T\xE1rgyi'
+        { value: 'gloves' },
+        'Keszty\u0171'
       ),
       React.createElement(
         'option',
-        { value: 'personal' },
-        'Szem\xE9lyi'
+        { value: 'garment' },
+        'Ruha'
+      ),
+      React.createElement(
+        'option',
+        { value: 'mask' },
+        'Maszk'
+      ),
+      React.createElement(
+        'option',
+        { value: 'other' },
+        'Egy\xE9b'
       )
     ),
     React.createElement(
@@ -218,7 +248,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange },
+      { className: 'form-control', name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange },
       React.createElement(
         'option',
         { value: 'hospital' },
@@ -232,7 +262,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'button',
-      { type: 'submit', onSubmit: function onSubmit(e) {
+      { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
           e.preventDefault;OfferingSender(companyFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
@@ -240,7 +270,7 @@ var CompanyForm = function CompanyForm(props) {
   );
 };
 
-var LaundrySeamSupport = function LaundrySeamSupport() {
+var MedicalGearSupport = function MedicalGearSupport() {
   var _React$useState3 = React.useState(false),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       isCompany = _React$useState4[0],
@@ -248,12 +278,12 @@ var LaundrySeamSupport = function LaundrySeamSupport() {
 
   return React.createElement(
     'div',
-    { id: 'form-container' },
+    { id: 'form-container', className: 'container' },
     React.createElement(
       'label',
       null,
       'Mag\xE1nszem\xE9lyk\xE9nt teszek felaj\xE1nl\xE1st:',
-      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', checked: true, value: false, onChange: function onChange() {
+      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', value: false, onChange: function onChange() {
           return setIsCompany(false);
         } })
     ),
@@ -268,5 +298,5 @@ var LaundrySeamSupport = function LaundrySeamSupport() {
     isCompany ? React.createElement(CompanyForm, null) : React.createElement(NaturalPersonForm, null)
   );
 };
-var domContainer = document.querySelector('#laundrySeamOffer');
-ReactDOM.render(React.createElement(LaundrySeamSupport, null), domContainer);
+var domContainer = document.querySelector('#medicalGearOffer');
+ReactDOM.render(React.createElement(MedicalGearSupport, null), domContainer);

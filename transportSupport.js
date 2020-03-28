@@ -45,7 +45,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
 
   return React.createElement(
     'div',
-    { className: 'container' },
+    null,
     React.createElement(
       'label',
       { htmlFor: 'offerer' },
@@ -148,7 +148,7 @@ var CompanyForm = function CompanyForm(props) {
 
   return React.createElement(
     'div',
-    { className: 'container' },
+    null,
     React.createElement(
       'label',
       { htmlFor: 'offerer' },
@@ -258,7 +258,7 @@ var TransportSupport = function TransportSupport() {
 
   return React.createElement(
     'div',
-    { id: 'form-container' },
+    { id: 'form-container', className: 'container' },
     React.createElement(
       'label',
       null,
