@@ -263,7 +263,7 @@ var TransportSupport = function TransportSupport() {
       'label',
       null,
       'Mag\xE1nszem\xE9lyk\xE9nt teszek felaj\xE1nl\xE1st:',
-      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', checked: true, value: false, onChange: function onChange() {
+      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', value: false, onChange: function onChange() {
           return setIsCompany(false);
         } })
     ),
