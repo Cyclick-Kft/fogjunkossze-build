@@ -170,7 +170,7 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'supportType' },
       'T\xE1mogat\xE1s m\xF3dja:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportType', id: 'supportType', value: naturalPersonFormVals.supportType, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'text', name: 'supportType', id: 'supportType', value: companyFormVals.supportType, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -193,7 +193,7 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement(
       'button',
       { type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault;financialOfferingSender(companyFormVals);
+          e.preventDefault;OfferingSender(companyFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )

@@ -185,13 +185,13 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'startingPoint' },
       'Honnan:'
     ),
-    React.createElement('input', { type: 'text', name: 'startingPoint', id: 'startingPoint', value: naturalPersonFormVals.startingPoint, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'text', name: 'startingPoint', id: 'startingPoint', value: companyFormVals.startingPoint, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'destination' },
       'Hov\xE1:'
     ),
-    React.createElement('input', { type: 'text', name: 'destination', id: 'destination', value: naturalPersonFormVals.destination, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'text', name: 'destination', id: 'destination', value: companyFormVals.destination, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'type' },
@@ -199,7 +199,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'type', id: 'type', value: naturalPersonFormVals.type, onChange: naturalPersonHandleChange },
+      { name: 'type', id: 'type', value: companyFormVals.type, onChange: companyHandleChange },
       React.createElement(
         'option',
         { value: 'forwarding' },
@@ -218,7 +218,7 @@ var CompanyForm = function CompanyForm(props) {
     ),
     React.createElement(
       'select',
-      { name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange },
+      { name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange },
       React.createElement(
         'option',
         { value: 'hospital' },
@@ -233,7 +233,7 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement(
       'button',
       { type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault;financialOfferingSender(companyFormVals);
+          e.preventDefault;OfferingSender(companyFormVals);
         } },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
