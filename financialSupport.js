@@ -44,7 +44,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
 
   return React.createElement(
     'div',
-    null,
+    { className: 'container' },
     React.createElement(
       'label',
       { htmlFor: 'offerer' },
@@ -127,7 +127,7 @@ var CompanyForm = function CompanyForm(props) {
 
   return React.createElement(
     'div',
-    null,
+    { className: 'container' },
     React.createElement(
       'label',
       { htmlFor: 'offerer' },
