@@ -39,8 +39,9 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     offerer: "",
     email: "",
     phoneNum: "",
-    protGearType: "gloves",
-    count: 0,
+    foodType: "warmFood",
+    quantity: 0,
+    quality: "volunteer",
     helpInTransport: false,
     supportMethod: "hospital"
   }),
@@ -51,7 +52,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
   return React.createElement(
     'form',
     { onSubmit: function onSubmit(e) {
-        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/medical-gear-support", naturalPersonFormVals);
+        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/meal-support", naturalPersonFormVals);
       } },
     React.createElement(
       'label',
@@ -78,45 +79,59 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
+      { htmlFor: 'foodType' },
+      '\xC9tel t\xEDpusa:'
+    ),
+    React.createElement(
+      'select',
+      { className: 'form-control', name: 'foodType', id: 'foodType', value: naturalPersonFormVals.foodType, onChange: naturalPersonHandleChange },
+      React.createElement(
+        'option',
+        { value: 'warmFood' },
+        'Meleg \xE9tel'
+      ),
+      React.createElement(
+        'option',
+        { value: 'sustainableFood' },
+        'Tart\xF3s \xE9lelmiszer'
+      ),
+      React.createElement(
+        'option',
+        { value: 'ingredients' },
+        'Hozz\xE1val\xF3k'
+      )
+    ),
+    React.createElement(
+      'label',
+      { htmlFor: 'quantity' },
+      'Mennyis\xE9g:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'number', name: 'quantity', id: 'quantity', value: naturalPersonFormVals.quantity, onChange: naturalPersonHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'quality' },
+      'Szolg\xE1ltat\xE1s min\u0151s\xE9ge:'
+    ),
+    React.createElement(
+      'select',
+      { className: 'form-control', name: 'quality', id: 'quality', value: naturalPersonFormVals.quality, onChange: naturalPersonHandleChange },
+      React.createElement(
+        'option',
+        { value: 'professional' },
+        'Hivat\xE1sos'
+      ),
+      React.createElement(
+        'option',
+        { value: 'volunteer' },
+        '\xD6nk\xE9ntes'
+      )
+    ),
+    React.createElement(
+      'label',
       { htmlFor: 'helpInTransport' },
       'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
     ),
     React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: !naturalPersonFormVals.helpInTransport, onChange: naturalPersonHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'count' },
-      'Darabsz\xE1m:'
-    ),
-    React.createElement('input', { className: 'form-control', type: 'number', name: 'count', id: 'count', value: naturalPersonFormVals.count, onChange: naturalPersonHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'protGearType' },
-      'V\xE9d\u0151felszerel\xE9s t\xEDpusa:'
-    ),
-    React.createElement(
-      'select',
-      { className: 'form-control', name: 'protGearType', id: 'protGearType', value: naturalPersonFormVals.protGearType, onChange: naturalPersonHandleChange },
-      React.createElement(
-        'option',
-        { value: 'gloves' },
-        'Keszty\u0171'
-      ),
-      React.createElement(
-        'option',
-        { value: 'garment' },
-        'Ruha'
-      ),
-      React.createElement(
-        'option',
-        { value: 'mask' },
-        'Maszk'
-      ),
-      React.createElement(
-        'option',
-        { value: 'other' },
-        'Egy\xE9b'
-      )
-    ),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -152,8 +167,9 @@ var CompanyForm = function CompanyForm(props) {
     address: "",
     email: "",
     phoneNum: "",
-    protGearType: "gloves",
-    count: 0,
+    foodType: "warmFood",
+    quantity: "",
+    quality: "volunteer",
     helpInTransport: false,
     supportMethod: "hospital"
   }),
@@ -164,7 +180,7 @@ var CompanyForm = function CompanyForm(props) {
   return React.createElement(
     'form',
     { onSubmit: function onSubmit(e) {
-        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/medical-gear-support", companyFormVals);
+        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/meal-support", companyFormVals);
       } },
     React.createElement(
       'label',
@@ -209,45 +225,59 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
+      { htmlFor: 'condition' },
+      '\xC9tel t\xEDpusa:'
+    ),
+    React.createElement(
+      'select',
+      { className: 'form-control', name: 'condition', id: 'condition', value: companyFormVals.condition, onChange: companyHandleChange },
+      React.createElement(
+        'option',
+        { value: 'warmFood' },
+        'Meleg \xE9tel'
+      ),
+      React.createElement(
+        'option',
+        { value: 'sustainableFood' },
+        'Tart\xF3s \xE9lelmiszer'
+      ),
+      React.createElement(
+        'option',
+        { value: 'ingredients' },
+        'Hozz\xE1val\xF3k'
+      )
+    ),
+    React.createElement(
+      'label',
+      { htmlFor: 'quantity' },
+      'Mennyis\xE9g:'
+    ),
+    React.createElement('input', { className: 'form-control', type: 'number', name: 'quantity', id: 'quantity', value: companyFormVals.quantity, onChange: companyHandleChange }),
+    React.createElement(
+      'label',
+      { htmlFor: 'quality' },
+      'Szolg\xE1ltat\xE1s min\u0151s\xE9ge:'
+    ),
+    React.createElement(
+      'select',
+      { className: 'form-control', name: 'quality', id: 'quality', value: companyFormVals.quality, onChange: companyHandleChange },
+      React.createElement(
+        'option',
+        { value: 'professional' },
+        'Hivat\xE1sos'
+      ),
+      React.createElement(
+        'option',
+        { value: 'volunteer' },
+        '\xD6nk\xE9ntes'
+      )
+    ),
+    React.createElement(
+      'label',
       { htmlFor: 'helpInTransport' },
       'Sz\xE1ll\xEDt\xE1sban tud seg\xEDteni:'
     ),
     React.createElement('input', { className: 'form-control', type: 'checkbox', name: 'helpInTransport', id: 'helpInTransport', value: !companyFormVals.helpInTransport, onChange: companyHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'count' },
-      'Darabsz\xE1m:'
-    ),
-    React.createElement('input', { className: 'form-control', type: 'number', name: 'count', id: 'count', value: companyFormVals.count, onChange: companyHandleChange }),
-    React.createElement(
-      'label',
-      { htmlFor: 'protGearType' },
-      'V\xE9d\u0151felszerel\xE9s t\xEDpusa:'
-    ),
-    React.createElement(
-      'select',
-      { className: 'form-control', name: 'protGearType', id: 'protGearType', value: companyFormVals.protGearType, onChange: companyHandleChange },
-      React.createElement(
-        'option',
-        { value: 'gloves' },
-        'Keszty\u0171'
-      ),
-      React.createElement(
-        'option',
-        { value: 'garment' },
-        'Ruha'
-      ),
-      React.createElement(
-        'option',
-        { value: 'mask' },
-        'Maszk'
-      ),
-      React.createElement(
-        'option',
-        { value: 'other' },
-        'Egy\xE9b'
-      )
-    ),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },

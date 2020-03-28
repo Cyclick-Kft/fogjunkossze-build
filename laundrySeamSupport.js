@@ -18,9 +18,14 @@ export var useForm = function useForm(initalValues) {
 export var OfferingSender = function OfferingSender(url, formFields) {
   fetch(url, {
     method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json'
     },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
     body: JSON.stringify(formFields)
   }).then(function (res) {
     return res.ok ? alert("Sikeres felajánlás") : alert("Sikertelen felajánlás");
@@ -45,8 +50,10 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       naturalPersonHandleChange = _useForm2[1];
 
   return React.createElement(
-    'div',
-    null,
+    'form',
+    { onSubmit: function onSubmit(e) {
+        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/laundry-seam-support", naturalPersonFormVals);
+      } },
     React.createElement(
       'label',
       { htmlFor: 'offerer' },
@@ -72,12 +79,12 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'condition' },
+      { htmlFor: 'serviceType' },
       'Szolg\xE1ltat\xE1s t\xEDpusa:'
     ),
     React.createElement(
       'select',
-      { className: 'form-control', name: 'condition', id: 'condition', value: naturalPersonFormVals.condition, onChange: naturalPersonHandleChange },
+      { className: 'form-control', name: 'serviceType', id: 'serviceType', value: naturalPersonFormVals.serviceType, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
         { value: 'laundry' },
@@ -146,9 +153,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     ),
     React.createElement(
       'button',
-      { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault();OfferingSender("", naturalPersonFormVals);
-        } },
+      { className: 'btn btn-outline-success', type: 'submit' },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
   );
@@ -173,8 +178,10 @@ var CompanyForm = function CompanyForm(props) {
       companyHandleChange = _useForm4[1];
 
   return React.createElement(
-    'div',
-    null,
+    'form',
+    { onSubmit: function onSubmit(e) {
+        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/laundry-seam-support", companyFormVals);
+      } },
     React.createElement(
       'label',
       { htmlFor: 'offerer' },
@@ -218,12 +225,12 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement('input', { className: 'form-control', type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'condition' },
+      { htmlFor: 'serviceType' },
       'Szolg\xE1ltat\xE1s t\xEDpusa:'
     ),
     React.createElement(
       'select',
-      { className: 'form-control', name: 'condition', id: 'condition', value: companyFormVals.condition, onChange: companyHandleChange },
+      { className: 'form-control', name: 'serviceType', id: 'serviceType', value: companyFormVals.serviceType, onChange: companyHandleChange },
       React.createElement(
         'option',
         { value: 'laundry' },
