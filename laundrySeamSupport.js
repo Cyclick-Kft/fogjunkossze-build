@@ -233,10 +233,10 @@ var CompanyForm = function CompanyForm(props) {
 };
 
 var LaundrySeamSupport = function LaundrySeamSupport() {
-  var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isCompany = _useState2[0],
-      setIsCompany = _useState2[1];
+  var _React$useState3 = React.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      isCompany = _React$useState4[0],
+      setIsCompany = _React$useState4[1];
 
   return React.createElement(
     'div',
