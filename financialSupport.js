@@ -62,7 +62,12 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
-    React.createElement('input', { type: 'tel', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
+    React.createElement(
+      'span',
+      null,
+      'K\xF6t\u0151jelekkel tagolva pl: (+36-30-000-0000)'
+    ),
+    React.createElement('input', { type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: naturalPersonFormVals.phoneNum, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'amount' },
@@ -158,7 +163,12 @@ var CompanyForm = function CompanyForm(props) {
       { htmlFor: 'phoneNum' },
       'Telefonsz\xE1m: '
     ),
-    React.createElement('input', { type: 'tel', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
+    React.createElement(
+      'span',
+      null,
+      'K\xF6t\u0151jelekkel tagolva pl: (+36-30-000-0000)'
+    ),
+    React.createElement('input', { type: 'tel', placeholder: '+36-30-000-0000', pattern: '[+]{1}[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}', name: 'phoneNum', id: 'phoneNum', value: companyFormVals.phoneNum, onChange: companyHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'amount' },
