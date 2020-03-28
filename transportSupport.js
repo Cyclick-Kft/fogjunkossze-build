@@ -240,7 +240,7 @@ var TransportSupport = function TransportSupport() {
 
   return React.createElement(
     'div',
-    { id: 'container' },
+    { id: 'form-container' },
     React.createElement(
       'label',
       null,
@@ -257,7 +257,7 @@ var TransportSupport = function TransportSupport() {
           return setIsCompany(false);
         } })
     ),
-    isCompany ? React.createElement(NaturalPersonForm, null) : React.createElement(CompanyForm, null)
+    isCompany ? React.createElement(CompanyForm, null) : React.createElement(NaturalPersonForm, null)
   );
 };
 var domContainer = document.querySelector('#transportOffer');

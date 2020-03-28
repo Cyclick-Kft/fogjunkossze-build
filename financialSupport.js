@@ -35,6 +35,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     email: "",
     phoneNum: "",
     amount: 0,
+    supportType: "",
     supportMethod: "hospital"
   }),
       _useForm2 = _slicedToArray(_useForm, 2),
@@ -70,10 +71,10 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     React.createElement('input', { type: 'number', name: 'amount', id: 'amount', value: naturalPersonFormVals.amount, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'amount' },
+      { htmlFor: 'supportType' },
       'T\xE1mogat\xE1s m\xF3dja:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportMethod', id: 'supportMethod', value: naturalPersonFormVals.supportMethod, onChange: naturalPersonHandleChange }),
+    React.createElement('input', { type: 'text', name: 'supportType', id: 'supportType', value: naturalPersonFormVals.supportType, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -108,6 +109,7 @@ var CompanyForm = function CompanyForm(props) {
     email: "",
     phoneNum: "",
     amount: 0,
+    supportType: "",
     supportMethod: "hospital"
   }),
       _useForm4 = _slicedToArray(_useForm3, 2),
@@ -161,10 +163,10 @@ var CompanyForm = function CompanyForm(props) {
     React.createElement('input', { type: 'number', name: 'amount', id: 'amount', value: companyFormVals.amount, onChange: companyHandleChange }),
     React.createElement(
       'label',
-      { htmlFor: 'amount' },
+      { htmlFor: 'supportType' },
       'T\xE1mogat\xE1s m\xF3dja:'
     ),
-    React.createElement('input', { type: 'text', name: 'supportMethod', id: 'supportMethod', value: companyFormVals.supportMethod, onChange: companyHandleChange }),
+    React.createElement('input', { type: 'text', name: 'supportType', id: 'supportType', value: naturalPersonFormVals.supportType, onChange: naturalPersonHandleChange }),
     React.createElement(
       'label',
       { htmlFor: 'supportMethod' },
@@ -198,7 +200,15 @@ var FinancialSupport = function FinancialSupport() {
 
   return React.createElement(
     'div',
-    { id: 'container' },
+    { id: 'form-container' },
+    React.createElement(
+      'label',
+      null,
+      'Mag\xE1nszem\xE9lyk\xE9nt teszek felaj\xE1nl\xE1st:',
+      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', checked: true, value: false, onChange: function onChange() {
+          return setIsCompany(false);
+        } })
+    ),
     React.createElement(
       'label',
       null,
@@ -207,15 +217,7 @@ var FinancialSupport = function FinancialSupport() {
           return setIsCompany(true);
         } })
     ),
-    React.createElement(
-      'label',
-      null,
-      'Mag\xE1nszem\xE9lyk\xE9nt teszek felaj\xE1nl\xE1st:',
-      React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asNaturalPerson', value: false, onChange: function onChange() {
-          return setIsCompany(false);
-        } })
-    ),
-    isCompany ? React.createElement(NaturalPersonForm, null) : React.createElement(CompanyForm, null)
+    isCompany ? React.createElement(CompanyForm, null) : React.createElement(NaturalPersonForm, null)
   );
 };
 var domContainer = document.querySelector('#financialOffer');
