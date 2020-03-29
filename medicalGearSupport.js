@@ -165,7 +165,9 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       ),
       ' elfogadom'
     ),
-    React.createElement('input', { type: 'checkbox', name: 'GDPR', id: 'GDPR', onChange: setGDPR(!GDPR) }),
+    React.createElement('input', { type: 'checkbox', name: 'GDPR', id: 'GDPR', onChange: function onChange() {
+        return setGDPR(!GDPR);
+      } }),
     React.createElement(
       'button',
       { className: 'btn btn-outline-success', disabled: GDPR ? false : true, type: 'submit' },
@@ -326,7 +328,9 @@ var CompanyForm = function CompanyForm(props) {
       ),
       ' elfogadom'
     ),
-    React.createElement('input', { type: 'checkbox', name: 'GDPR', id: 'GDPR', onChange: setGDPR(!GDPR) }),
+    React.createElement('input', { type: 'checkbox', name: 'GDPR', id: 'GDPR', onChange: function onChange() {
+        return setGDPR(!GDPR);
+      } }),
     React.createElement(
       'button',
       { className: 'btn btn-outline-success', disabled: GDPR ? false : true, type: 'submit' },
