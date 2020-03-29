@@ -41,7 +41,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
     phoneNum: "",
     protGearType: "gloves",
     count: 0,
-    helpInTransport: false,
+    helpInTransport: "no",
     supportMethod: "hospital"
   }),
       _useForm2 = _slicedToArray(_useForm, 2),
@@ -91,12 +91,12 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       { name: 'helpInTransport', id: 'helpInTransport', value: naturalPersonFormVals.helpInTransport, onChange: naturalPersonHandleChange },
       React.createElement(
         'option',
-        { value: true },
+        { value: 'yes' },
         'Tudok seg\xEDteni a sz\xE1ll\xEDt\xE1sban'
       ),
       React.createElement(
         'option',
-        { value: false },
+        { value: 'no' },
         'Nem tudok seg\xEDteni a sz\xE1ll\xEDt\xE1sban'
       )
     ),
@@ -187,7 +187,7 @@ var CompanyForm = function CompanyForm(props) {
     phoneNum: "",
     protGearType: "gloves",
     count: 0,
-    helpInTransport: false,
+    helpInTransport: "no",
     supportMethod: "hospital"
   }),
       _useForm4 = _slicedToArray(_useForm3, 2),
@@ -255,12 +255,12 @@ var CompanyForm = function CompanyForm(props) {
       { name: 'helpInTransport', id: 'helpInTransport', value: companyFormVals.helpInTransport, onChange: companyHandleChange },
       React.createElement(
         'option',
-        { value: true },
+        { value: 'yes' },
         'Tudok seg\xEDteni a sz\xE1ll\xEDt\xE1sban'
       ),
       React.createElement(
         'option',
-        { value: false },
+        { value: 'no' },
         'Nem tudok seg\xEDteni a sz\xE1ll\xEDt\xE1sban'
       )
     ),
