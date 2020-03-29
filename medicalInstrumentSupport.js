@@ -55,7 +55,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       setGDPR = _React$useState4[1];
 
   return React.createElement(
-    'from',
+    'form',
     { onSubmit: function onSubmit(e) {
         e.preventDefault();OfferingSender("http://api.fogjunkossze.hu/medical-instrument-support", naturalPersonFormVals);
       } },
