@@ -401,7 +401,7 @@ var MedicalInstrumentSupport = function MedicalInstrumentSupport() {
     React.createElement(
       'label',
       null,
-      'C\xE9g k\xE9nt teszek felaj\xE1nl\xE1st:',
+      'C\xE9gk\xE9nt teszek felaj\xE1nl\xE1st:',
       React.createElement('input', { type: 'radio', name: 'isCompany', id: 'asCompany', value: true, onChange: function onChange() {
           return setIsCompany(true);
         } })
