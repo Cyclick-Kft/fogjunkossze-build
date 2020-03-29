@@ -50,7 +50,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
   return React.createElement(
     'form',
     { onSubmit: function onSubmit(e) {
-        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/financial-support", naturalPersonFormVals);
+        e.preventDefault();OfferingSender("http://api.fogjunkossze.hu/financial-support", naturalPersonFormVals);
       } },
     React.createElement(
       'label',
@@ -133,7 +133,7 @@ var CompanyForm = function CompanyForm(props) {
   return React.createElement(
     'form',
     { onSubmit: function onSubmit(e) {
-        e.preventDefault();OfferingSender("http://fogjunkossze.hu/api/financial-support", companyFormVals);
+        e.preventDefault();OfferingSender("http://api.fogjunkossze.hu/financial-support", companyFormVals);
       } },
     React.createElement(
       'label',
