@@ -49,7 +49,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       naturalPersonFormVals = _useForm2[0],
       naturalPersonHandleChange = _useForm2[1];
 
-  var _React$useState3 = React.useState(true),
+  var _React$useState3 = React.useState(false),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       GDPR = _React$useState4[0],
       setGDPR = _React$useState4[1];
@@ -190,7 +190,7 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       } }),
     React.createElement(
       'button',
-      { className: 'btn btn-outline-success', disabled: GDPR ? true : false, type: 'submit' },
+      { className: 'btn btn-outline-success', disabled: !GDPR, type: 'submit' },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
   );
@@ -373,7 +373,7 @@ var CompanyForm = function CompanyForm(props) {
       } }),
     React.createElement(
       'button',
-      { className: 'btn btn-outline-success', disabled: GDPR ? true : false, type: 'submit' },
+      { className: 'btn btn-outline-success', disabled: !GDPR, type: 'submit' },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
   );
