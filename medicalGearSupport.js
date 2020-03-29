@@ -48,6 +48,11 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       naturalPersonFormVals = _useForm2[0],
       naturalPersonHandleChange = _useForm2[1];
 
+  var _React$useState3 = React.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      GDPR = _React$useState4[0],
+      setGDPR = _React$useState4[1];
+
   return React.createElement(
     'form',
     { onSubmit: function onSubmit(e) {
@@ -137,8 +142,20 @@ var NaturalPersonForm = function NaturalPersonForm(props) {
       )
     ),
     React.createElement(
+      'label',
+      { htmlFor: 'GDPR' },
+      'Az ',
+      React.createElement(
+        'a',
+        { target: '_blank', href: 'http://fogjunkossze.hu/adatvedelmi-nyilatkozat' },
+        'adatkezel\xE9si nyilatkozatot'
+      ),
+      ' elfogadom'
+    ),
+    React.createElement('input', { type: 'checkbox', name: 'GDPR', id: 'GDPR', onChange: setGDPR(!GDPR) }),
+    React.createElement(
       'button',
-      { className: 'btn btn-outline-success', type: 'submit' },
+      { className: 'btn btn-outline-success', disabled: GDPR ? false : true, type: 'submit' },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
   );
@@ -160,6 +177,11 @@ var CompanyForm = function CompanyForm(props) {
       _useForm4 = _slicedToArray(_useForm3, 2),
       companyFormVals = _useForm4[0],
       companyHandleChange = _useForm4[1];
+
+  var _React$useState5 = React.useState(false),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      GDPR = _React$useState6[0],
+      setGDPR = _React$useState6[1];
 
   return React.createElement(
     'form',
@@ -268,20 +290,30 @@ var CompanyForm = function CompanyForm(props) {
       )
     ),
     React.createElement(
+      'label',
+      { htmlFor: 'GDPR' },
+      'Az ',
+      React.createElement(
+        'a',
+        { target: '_blank', href: 'http://fogjunkossze.hu/adatvedelmi-nyilatkozat' },
+        'adatkezel\xE9si nyilatkozatot'
+      ),
+      ' elfogadom'
+    ),
+    React.createElement('input', { type: 'checkbox', name: 'GDPR', id: 'GDPR', onChange: setGDPR(!GDPR) }),
+    React.createElement(
       'button',
-      { className: 'btn btn-outline-success', type: 'submit', onSubmit: function onSubmit(e) {
-          e.preventDefault();OfferingSender(companyFormVals);
-        } },
+      { className: 'btn btn-outline-success', disabled: GDPR ? false : true, type: 'submit' },
       'Felaj\xE1nl\xE1s k\xFCld\xE9se'
     )
   );
 };
 
 var MedicalGearSupport = function MedicalGearSupport() {
-  var _React$useState3 = React.useState(false),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      isCompany = _React$useState4[0],
-      setIsCompany = _React$useState4[1];
+  var _React$useState7 = React.useState(false),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      isCompany = _React$useState8[0],
+      setIsCompany = _React$useState8[1];
 
   return React.createElement(
     'div',
@@ -302,6 +334,7 @@ var MedicalGearSupport = function MedicalGearSupport() {
           return setIsCompany(true);
         } })
     ),
+    React.createElement('br', null),
     isCompany ? React.createElement(CompanyForm, null) : React.createElement(NaturalPersonForm, null)
   );
 };
